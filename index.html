@@ -78,6 +78,29 @@
             object-fit: cover;
         }
 
+        /* Tlačítko pro proklik na aktuální módu */
+        .cta-container {
+            text-align: center;
+            margin: 50px 0 20px 0;
+        }
+        .button {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 35px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+        }
+        .button:hover {
+            background-color: #b5952f;
+            transform: translateY(-2px);
+        }
+
         /* Patička */
         footer {
             text-align: center;
@@ -140,6 +163,10 @@
             </div>
             <img src="https://images.unsplash.com/photo-1550614000-4b95dd244fa8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Elegantní vintage móda">
         </section>
+
+        <div class="cta-container">
+            <a href="https://www.dior.com/en_int/fashion/womens-fashion/latest-shows" target="_blank" class="button">Objevte současnou módu Dior</a>
+        </div>
     </main>
 
     <footer>
