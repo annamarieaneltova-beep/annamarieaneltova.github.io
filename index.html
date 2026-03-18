@@ -5,50 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christian Dior | Anna Marie Aneltová</title>
     <style>
+        /* Celkový vzhled a barvy */
         body {
             font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fcfcfc;
-            max-width: 800px;
+            line-height: 1.8;
+            color: #2c3e50; /* Elegantní tmavě modro-šedá */
+            background-color: #fdfbfb; /* Jemná krémově bílá */
+            max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 30px;
         }
+
+        /* Hlavička */
         header {
             text-align: center;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            background-color: #ffffff;
+            border-bottom: 3px solid #d4af37; /* Zlatý akcent */
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
         }
         h2 {
-            font-size: 1.5em;
-            color: #555;
+            font-size: 1.4em;
+            color: #d4af37; /* Zlatá barva pro podnadpis */
             font-weight: normal;
+            font-style: italic;
         }
         .author {
-            font-style: italic;
-            color: #777;
+            font-size: 0.9em;
+            color: #888;
+            margin-top: 15px;
         }
+
+        /* Jednotlivé sekce s flexboxem pro obrázky vedle textu */
         section {
+            background: #ffffff;
+            padding: 25px;
             margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        /* Každá sudá sekce bude mít obrázek na druhé straně */
+        section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .text-content {
+            flex: 1;
         }
         h3 {
-            border-left: 3px solid #333;
-            padding-left: 10px;
+            border-left: 4px solid #d4af37; /* Zlatý pruh */
+            padding-left: 15px;
+            color: #1a1a1a;
+            margin-top: 0;
         }
+
+        /* Stylování obrázků */
+        img {
+            max-width: 40%;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        /* Patička */
         footer {
             text-align: center;
             font-size: 0.9em;
             color: #777;
             border-top: 1px solid #ddd;
             padding-top: 20px;
-            margin-top: 40px;
+            margin-top: 50px;
+        }
+
+        /* Responzivita pro mobily */
+        @media (max-width: 768px) {
+            section, section:nth-child(even) {
+                flex-direction: column;
+            }
+            img {
+                max-width: 100%;
+                margin-top: 15px;
+            }
         }
     </style>
 </head>
@@ -62,23 +110,35 @@
 
     <main>
         <section>
-            <h3>1. Umělecké začátky místo diplomacie</h3>
-            <p>Christian Dior se narodil v roce 1905 v bohaté francouzské rodině. Ačkoliv si jeho rodiče přáli, aby se stal diplomatem, jeho srdce táhlo k umění a architektuře. V roce 1928 si za finanční pomoci svého otce otevřel malou uměleckou galerii, kde vystavoval díla takových mistrů, jako byli Pablo Picasso nebo Salvador Dalí.</p>
+            <div class="text-content">
+                <h3>1. Umělecké začátky místo diplomacie</h3>
+                <p>Christian Dior se narodil v roce 1905 v bohaté francouzské rodině. Ačkoliv si jeho rodiče přáli, aby se stal diplomatem, jeho srdce táhlo k umění a architektuře. V roce 1928 si za finanční pomoci svého otce otevřel malou uměleckou galerii, kde vystavoval díla takových mistrů, jako byli Pablo Picasso nebo Salvador Dalí.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Umělecká galerie a obrazy">
         </section>
 
         <section>
-            <h3>2. Ztráta majetku a první návrhy</h3>
-            <p>Velká hospodářská krize a smrt jeho matky ve 30. letech přivedly rodinu k bankrotu. Dior musel svou galerii zavřít. Aby se uživil, začal prodávat své módní skici klobouků a šatů pařížským módním domům a ilustroval pro magazín Figaro Illustré. Tento těžký životní krok ho paradoxně nasměroval k jeho životnímu poslání.</p>
+            <div class="text-content">
+                <h3>2. Ztráta majetku a první návrhy</h3>
+                <p>Velká hospodářská krize a smrt jeho matky ve 30. letech přivedly rodinu k bankrotu. Dior musel svou galerii zavřít. Aby se uživil, začal prodávat své módní skici klobouků a šatů pařížským módním domům a ilustroval pro magazín Figaro Illustré. Tento těžký životní krok ho paradoxně nasměroval k jeho životnímu poslání.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Módní skici a nákresy">
         </section>
 
         <section>
-            <h3>3. Učení se od mistrů</h3>
-            <p>V roce 1938 získal místo asistenta u módního návrháře Roberta Pigueta, kde vytvořil své první úspěšné modely. Po službě v armádě během druhé světové války nastoupil do módního domu Luciena Lelonga. Zde po boku Pierra Balmaina pomáhal udržet francouzský módní průmysl naživu během těžkých válečných let.</p>
+            <div class="text-content">
+                <h3>3. Učení se od mistrů</h3>
+                <p>V roce 1938 získal místo asistenta u módního návrháře Roberta Pigueta, kde vytvořil své první úspěšné modely. Po službě v armádě během druhé světové války nastoupil do módního domu Luciena Lelonga. Zde po boku Pierra Balmaina pomáhal udržet francouzský módní průmysl naživu během těžkých válečných let.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1612423284934-2850a4ea6b0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Krejčovské panny a látky">
         </section>
 
         <section>
-            <h3>4. Založení značky a revoluce "New Look"</h3>
-            <p>V roce 1946 mu textilní magnát Marcel Boussac nabídl financování vlastního módního domu. A tak vznikl dům <strong>Christian Dior</strong>. V únoru 1947 představil svou první kolekci, kterou šéfredaktorka amerického Harper's Bazaar nazvala <em>"New Look"</em>. Silueta s úzkým pasem a bohatou sukní vrátila ženám po válce luxus, ženskost a eleganci, a navždy změnila historii módy.</p>
+            <div class="text-content">
+                <h3>4. Založení značky a revoluce "New Look"</h3>
+                <p>V roce 1946 mu textilní magnát Marcel Boussac nabídl financování vlastního módního domu. A tak vznikl dům <strong>Christian Dior</strong>. V únoru 1947 představil svou první kolekci, kterou šéfredaktorka amerického Harper's Bazaar nazvala <em>"New Look"</em>. Silueta s úzkým pasem a bohatou sukní vrátila ženám po válce luxus, ženskost a eleganci, a navždy změnila historii módy.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1550614000-4b95dd244fa8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Elegantní vintage móda">
         </section>
     </main>
 
